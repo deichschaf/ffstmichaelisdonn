@@ -1,0 +1,28 @@
+.tooltip {
+  @apply bg-white border border-green border-solid rounded text-grey;
+  @apply p-3 font-light text-xs leading-normal whitespace-pre-wrap;
+
+  &:before,
+  &:after {
+    @apply absolute;
+    content: '';
+  }
+
+  &:before {
+    top: 100%;
+    right: 12.4px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10.5px 0;
+    border-color: theme('colors.green.default') transparent transparent transparent;
+  }
+
+  &:after {
+    top: calc(100% - 1px);
+    right: 13.2px;
+    border-style: solid;
+    border-width: 9.5px 9.7px 0;
+    border-color: theme('colors.white') transparent transparent transparent;
+  }
+}

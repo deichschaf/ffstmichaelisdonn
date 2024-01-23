@@ -1,0 +1,68 @@
+version: '3.4'
+services:
+    ffstmichaelisdonn:
+        container_name: ffstmichaelisdonn
+        image: ffstmichaelisdonn
+        build:
+            context: .
+            dockerfile: .docker/ffstmichaelisdonn/Dockerfile
+        volumes:
+            - ./:/app
+        networks:
+            ffstmichaelisdonn-network:
+                ipv4_address: 10.131.0.112
+        depends_on:
+            - ffstmichaelisdonn-mysql
+
+    ffstmichaelisdonn-mysql:
+        image: mysql:8.0
+        restart: always
+        container_name: ffstmichaelisdonn-mysql
+        volumes:
+            - .docker/dbdata:/var/lib/mysql:rw
+        environment:
+            - MYSQL_ROOT_PASSWORD=ffstmichaelisdonn
+            - MYSQL_DATABASE=ffstmichaelisdonn
+            - MYSQL_USER=ffstmichaelisdonn
+            - MYSQL_PASSWORD=ffstmichaelisdonn
+        ports:
+            - 3916:3306
+        networks:
+            ffstmichaelisdonn-network:
+                ipv4_address: 10.131.0.118
+        command: --innodb-use-native-aio=0
+
+    php-fpm:
+        build: .docker/php-fpm
+        container_name: ffstmichaelisdonn-php-fpm
+        working_dir: /application
+        links:
+            - ffstmichaelisdonn-mysql
+        volumes:
+            - .:/application
+            - .:/app
+            - .docker/nginx/docker-php-ext-xdebug.ini:/etc/php/8.2/fpm/conf.d/99-docker-php-ext-xdebug.ini
+            - .docker/nginx/docker-php-ext-overwrite.ini:/etc/php/8.2/fpm/conf.d/99-docker-php-ext-overwrite.ini
+            - .docker/nginx/php-ini-overrides.ini:/etc/php/8.2/fpm/conf.d/99-overrides.ini
+
+    ffstmichaelisdonn-nginx:
+        image: nginx:latest
+        build: .docker/nginx
+        volumes:
+            - ./:/app
+            - '.docker/nginx/default.conf:/etc/nginx/conf.d/default.conf'
+        #    - ./docker/nginx.conf:/etc/nginx/nginx.conf
+        ports:
+            - 29279:80
+        depends_on:
+            - ffstmichaelisdonn
+        networks:
+            ffstmichaelisdonn-network:
+                ipv4_address: 10.131.0.113
+
+networks:
+    ffstmichaelisdonn-network:
+        driver: bridge
+        ipam:
+            config:
+                -   subnet: 10.131.0.10/24

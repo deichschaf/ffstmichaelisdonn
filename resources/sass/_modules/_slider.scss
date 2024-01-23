@@ -1,0 +1,29 @@
+.bx-default-pager {
+  display: none;
+}
+
+.bx-wrapper {
+  border: none;
+  background: none;
+  margin: 0px;
+  max-height: 356px;
+}
+.bx-controls {
+  display: none;
+}
+
+.bxslider {
+  .bx-viewport {
+    height: auto;
+  }
+  li {
+    visibility: hidden;
+  }
+  &:first-child {
+    visibility: visible;
+  }
+}
+
+.rotationhide {
+  display: none;
+}

@@ -1,0 +1,107 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [
+                    [
+                        // Node.js builtins. You could also generate this regex if you use a `.js` config.
+                        // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+                        // Note that if you use the `node:` prefix for Node.js builtins,
+                        // you can avoid this complexity: You can simply use "^node:".
+                        "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
+                        // Packages. `react` related packages come first.
+                        "^react",
+                        "^@?\\w",
+                        // Internal packages.
+                        "^(@ghr20)(/.*|$)",
+                        // Side effect imports.
+                        "^\\u0000",
+                        // Parent imports. Put `..` last.
+                        "^\\.\\.(?!/?$)",
+                        "^\\.\\./?$",
+                        // Other relative imports. Put same-folder imports and `.` last.
+                        "^\\./(?=.*/)(?!/?$)",
+                        "^\\.(?!/?$)",
+                        "^\\./?$",
+                        // Style imports.
+                        "^.+\\.s?css$"
+                    ]
+                ]
+            }
+        ],
+        "simple-import-sort/exports": "error",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "jsx-quotes": [
+            2,
+            "prefer-double"
+        ],
+        "brace-style": [
+            2,
+            "1tbs"
+        ],
+        "comma-style": [
+            2,
+            "last"
+        ],
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-constant-condition": 2,
+        "semi": [
+            2,
+            "always"
+        ],
+        "keyword-spacing": [
+            2,
+            {
+                "after": true
+            }
+        ],
+        "space-before-blocks": [
+            2,
+            "always"
+        ],
+        "strict": [
+            2,
+            "never"
+        ],
+        "quotes": [
+            2,
+            "double"
+        ],
+        "react/self-closing-comp": 1,
+        "react/no-did-mount-set-state": 1,
+        "react/no-did-update-set-state": 1,
+        "react/jsx-uses-react": 1,
+        "react/jsx-uses-vars": 1,
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "no-mixed-spaces-and-tabs": 2
+    },
+    "plugins": [
+        "react",
+        "simple-import-sort",
+        "import"
+    ],
+    "globals": {}
+}

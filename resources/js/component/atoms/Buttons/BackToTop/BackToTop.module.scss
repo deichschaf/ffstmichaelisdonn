@@ -1,0 +1,15 @@
+.backToTop {
+  @apply bg-primary border border-transparent;
+  @apply h-11 w-11;
+  @apply cursor-pointer fixed hidden rounded-full;
+
+  bottom: 2rem;
+
+  &:hover {
+    @apply bg-primary-hover;
+  }
+
+  @screen sm {
+    @apply h-15 w-15;
+  }
+}

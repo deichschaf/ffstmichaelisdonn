@@ -1,0 +1,101 @@
+$gfx: '../grfx/';
+$gfxpath: '../img/grfx/';
+$images: '../img/';
+$webarch: '../images/webarch/icon/';
+$webarchicon: '../images/webarch/icon/';
+$svgs: '../js/component/svgs/';
+$fontsfolder: '../fonts/';
+
+// Body
+$body-bg: #d2e6cd;
+$text-shaddow: rgb(0 0 0 / 75%);
+$text-shaddow-light: rgb(0 0 0 / 25%);
+$font-family: Tahoma, Arial, Helvetica, sans-serif;
+
+// Typography
+$font-family-sans-serif: 'Raleway', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$text-color: #000000;
+$color-dark: #1d6631;
+$color-dark-green: #1d6631;
+$color-white: #ffffff;
+$color-green: #d2e6cd;
+$color-orange: #e39777;
+$color-red: #c80000;
+$color-blue: #0000ff;
+$color-light-grey: #999999;
+$color-dark-grey: #444444;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Panels
+$panel-default-heading-bg: #fff;
+$darkmode-background: #444444;
+
+//$darkmode-font-color: #000000;
+$darkmode-font-color: $text-color;
+$darkmode-font-color_bgcolor1: #444444;
+$darkmode-link-color: #e39777;
+$darkmode-img-filder: grayscale(30%);
+$bgcolorheadline: #c80000;
+$bgcolor1: #ffffff;
+$bgcolor1_hover: #ffffff;
+$bgcolor2: #ff9e81; //rgba(213, 0, 0, 0.71);
+$bgcolor2_hover: #ff9e81; //rgba(213, 0, 0, 0.71);
+
+$darkmode-bgcolorheadline: #222;
+$darkmode-bgcolor1: #ffffff;
+$darkmode-bgcolor1_hover: #ff9e81;
+$darkmode-bgcolor2: #999;
+$darkmode-bgcolor2_hover: #ff9e81;
+$darkmode-even: #bbbbbb;
+$darkmode-odd: #555555;
+$darkmode-title: #363636;
+
+.col-xs-0 {
+  @media (max-width: 575px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.col-sm-0 {
+  @media (min-width: 576px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.col-md-0 {
+  @media (min-width: 768px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.col-lg-0 {
+  @media (min-width: 992px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.col-xl-0 {
+  @media (min-width: 1200px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.green {
+  color: $color-dark;
+}
+
+.red {
+  color: $color-red;
+}

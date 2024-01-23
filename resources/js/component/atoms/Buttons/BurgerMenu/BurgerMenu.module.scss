@@ -1,0 +1,19 @@
+.BurgerMenu {
+  @apply p-3;
+
+  @screen md {
+    @apply hidden;
+  }
+
+  svg {
+    @apply stroke-current text-grey;
+    height: 19px;
+    width: 23px;
+  }
+
+  &--open {
+    svg {
+      @apply text-green;
+    }
+  }
+}

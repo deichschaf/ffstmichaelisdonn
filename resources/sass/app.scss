@@ -1,0 +1,114 @@
+// @import "global";
+@import '_config/reset';
+@import '~normalize.css/normalize.css';
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/v4-shims';
+@import 'weather-icons/sass/weather-icons';
+@import 'variables';
+@import 'template/company_one';
+@import '_modules/holiday';
+@import '_modules/slider';
+@import '_modules/navbar';
+@import '_modules/bilder';
+@import '../js/component/component';
+@import '_modules/darkmode';
+@import '_modules/notifications';
+@import 'template/priority-nav-core';
+@import '_modules/layout';
+@import '_modules/moduls';
+@import '_modules/shadowbox';
+@import '_modules/map';
+@import '_modules/subwebarch/grid';
+@import 'template/firetheme';
+@import '_modules/weather.scss';
+@import '_modules/picture';
+@import '_modules/_nocopy.scss';
+@import '_modules/tableOddEven';
+
+body {
+  overflow-x: hidden;
+}
+
+.row {
+  &.darkgreen {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $color-dark;
+  }
+
+  &.white {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $color-white;
+  }
+
+  &.green {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $color-green;
+  }
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+@include media-breakpoint-down(sm) {
+  .mobile-footer {
+    padding: 26px;
+  }
+  .main-container {
+    padding: 15px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .nav {
+    --bs-nav-link-font-size: 13px;
+  }
+  .dropdown-menu {
+    display: block !important;
+    border: none !important;
+    background: none !important;
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+
+    ul {
+      li {
+        a {
+          display: block;
+          padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+          font-size: var(--bs-nav-link-font-size);
+          font-weight: var(--bs-nav-link-font-weight);
+          color: var(--bs-nav-link-color);
+          text-decoration: none;
+          transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+            border-color 0.15s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .nav-item {
+    &.dropdown {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.listcol {
+  padding: 11px 12px;
+}

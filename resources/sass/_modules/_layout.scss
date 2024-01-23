@@ -1,0 +1,84 @@
+.logo {
+  //min-width: 250px;
+  //width: 100%;
+  .logoname {
+    display: flex;
+    color: $color-white;
+
+    img {
+      margin-right: 10px;
+      max-height: 60px;
+      width: 60px;
+      fill: $color-white;
+    }
+    span {
+      &.title {
+        display: flex;
+        font-size: 24px;
+        line-height: 25px;
+        padding-top: 10px;
+      }
+      &.subtitle {
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 18px;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .logo {
+    //padding-left: 15px;
+    //padding-right: 15px;
+    //overflow-x:hidden;
+  }
+}
+div {
+  //border:1px solid red !important;
+  //background: blue;
+}
+footer {
+  &.site-footer {
+    h4,
+    .h4 {
+      &.headline {
+        text-transform: uppercase;
+      }
+    }
+    ul {
+      li {
+        @include media-breakpoint-down(sm) {
+          float: none;
+          width: 100%;
+          &:nth-child(2n) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    ul.socialmedia {
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 40px;
+        li {
+          float: right;
+          width: 45%;
+
+          &:nth-child(2n) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    p,
+    a,
+    ul li a,
+    ul i p {
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+      }
+    }
+  }
+}

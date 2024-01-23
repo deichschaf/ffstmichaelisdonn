@@ -1,0 +1,43 @@
+.statisticBox {
+  .iconarea {
+    text-align: center;
+    position: relative;
+    .icon {
+      position: relative;
+      z-index: 2;
+      margin: auto;
+      width: 88px;
+      height: 88px;
+      border: 8px solid white;
+      line-height: 88px;
+      border-radius: 50%;
+      background: #e12e1a;
+      vertical-align: middle;
+      i {
+        font-size: 36px !important;
+        color: #fff !important;
+      }
+    }
+    .infoBoxContent {
+      margin-top: -24px;
+      background: #ffffff;
+      border: 1px solid #ced4da;
+      padding: 35px 0 10px 0;
+      height: 220px;
+
+      h3 {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.5em;
+        margin: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 100%;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom !important;
+}
+
+.erfolgreich {
+  color: #009900;
+  font-weight: bold;
+}
+
+.fehler,
+.rot,
+.red {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin-left: 0px;
+
+    li {
+    }
+  }
+}

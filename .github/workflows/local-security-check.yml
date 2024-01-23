@@ -1,0 +1,19 @@
+name: Security scanner
+
+on: [ push, pull_request ]
+
+jobs:
+  security:
+    name: Local PHP Security Checker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Local PHP Security Checker
+        id: local_php_security_checker
+        uses: docker://pplotka/local-php-security-checker-github-actions
+        with:
+          format: markdown
+      - name: Display the output
+        run: echo "${{ steps.local_php_security_checker.outputs.security }}"

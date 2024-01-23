@@ -1,0 +1,67 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $darkmode-background;
+    color: $darkmode-font-color;
+  }
+  a {
+    color: $darkmode-font-color;
+  }
+  img {
+    filter: $darkmode-img-filder;
+  }
+  #main {
+    background-color: $darkmode-background;
+    color: $darkmode-font-color;
+  }
+  .ueberschrift {
+    background-color: $darkmode-title;
+  }
+  .bghell {
+    background-color: $darkmode-even;
+  }
+  .bgdunkel {
+    background-color: $darkmode-odd;
+  }
+  #content {
+    .bgcolorheadline {
+      background-color: $darkmode-bgcolorheadline;
+      color: $darkmode-font-color_bgcolor1;
+    }
+
+    .bgcolor1 {
+      background-color: $darkmode-bgcolor1;
+      color: $darkmode-font-color_bgcolor1;
+
+      &:hover {
+        background-color: $darkmode-bgcolor1_hover;
+      }
+
+      a {
+        color: $darkmode-font-color_bgcolor1;
+      }
+    }
+
+    .bgcolor2 {
+      background-color: $darkmode-bgcolor2;
+      color: $darkmode-font-color;
+
+      &:hover {
+        background-color: $darkmode-bgcolor2_hover;
+      }
+
+      a {
+        color: $darkmode-font-color;
+      }
+    }
+
+    .page-content {
+      a {
+        color: $text-color !important;
+      }
+    }
+
+    .detailinfo {
+      background: none;
+    }
+  }
+}

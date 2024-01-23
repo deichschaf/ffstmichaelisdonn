@@ -1,0 +1,19 @@
+name: security-checker-action
+
+on:
+  pull_request:
+    branches: [ master, main ]
+  push:
+
+jobs:
+  security:
+    name: Display the vulnerabilities as JSON
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: symfonycorp/security-checker-action@v3
+        with:
+          disable-exit-code: 1
+        id: security-check
+      - name: Display the output
+        run: echo ${{ steps.security-check.outputs.vulns }}

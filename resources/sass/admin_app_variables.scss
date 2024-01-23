@@ -1,0 +1,60 @@
+@import 'variables';
+$color-dark-grey: #333843;
+$color-light-black: #1b1e24;
+$color-medium-black: #535862;
+$color-medium-red: #f35958;
+$color-grey: #ccc;
+$font-color: #000000;
+$color-light-green: #0aa699;
+$color-white: #ffffff;
+$color-white2: #e8edf1;
+$color-white3: #ffffcc;
+$color-grey-dropdown: #808080;
+$color-verylight-blue: #eff4f8;
+$color-verylight-blue2: #ecf0f2;
+$color-verylight-blue3: #e2e8eb;
+$color-verylight-blue4: #e8edf3;
+$color-verylight-blue5: #c2c6cb;
+$color-grey2: #505458;
+$color-grey3: #c1cace;
+$color-grey4: #95989a;
+$color-green2: #099a8c;
+$color-blue: #0082d4;
+$color-blue2: #1b3148;
+$color-blue3: #0090d9;
+$color-blue4: #1f3853;
+$color-blue5: #6f7b8a;
+$color-blue6: #576475;
+$color-orange: #faa652;
+$color-orange2: #fbb05e;
+$color-yellow: #fef8ae;
+$color-red: #f14d4d;
+$color-black: #000000;
+$font-roboto: 'Roboto';
+$font-material-icons: 'Material Icons';
+$font-icomoon: 'icomoon';
+$img-portlet-tray: '../img/icon/portlet-tray.png';
+$img-portlet-tray-2x: '../img/icon/portlet-tray-2x.png';
+$img-top-tray: '../img/icon/top-tray.png';
+$img-top-tray-2x: '../img/icon/top-trayx2.png';
+$img-pullup: '../img/pullup.png';
+$img-pullup-2x: '../img/pullup2x.png';
+$img-status: '../img/icon/status.png';
+$img-status-2x: '../img/icon/status2x.png';
+$img-noti-cross: '../img/icon/noti-cross.png';
+$img-noti-cross-2x: '../img/icon/noti-cross-2x.png';
+$img-notification-alert: '../img/notification-alert.png';
+$font-path-custom-set: '../fonts/';
+
+.container {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.header {
+  .header-quick-nav {
+    height: 50px;
+    .h1 {
+      margin-bottom: 0px;
+    }
+  }
+}

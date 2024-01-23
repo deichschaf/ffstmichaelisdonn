@@ -1,0 +1,1 @@
+c:\php\php.exe php-cs-fixer.phar self-update -f &&  c:\php\php.exe php-cs-fixer.phar fix app --rules=@PSR2 &&  c:\php\php.exe php-cs-fixer.phar fix resources --rules=@PSR2 &&  c:\php\php.exe php-cs-fixer.phar fix tests --rules=@PSR2

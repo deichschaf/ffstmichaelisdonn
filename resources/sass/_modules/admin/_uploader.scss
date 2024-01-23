@@ -1,0 +1,14 @@
+.Image--Uploader--Multible--Area,
+.Image--Uploader--Single--Area {
+  .uploader {
+    .uploader_preview {
+      width: 100px;
+      float: left;
+      margin-right: 5px;
+
+      .preview {
+        width: 100%;
+      }
+    }
+  }
+}

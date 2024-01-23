@@ -1,0 +1,12 @@
+.row {
+  &.colorchanger {
+    &:nth-child(odd) {
+      background-color: $bgcolor1;
+    }
+
+    &:nth-child(even) {
+      //background-color: $bgcolor2;
+      background-color: $bgcolor_changer;
+    }
+  }
+}

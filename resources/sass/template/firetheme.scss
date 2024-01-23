@@ -1,0 +1,37 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+
+  &.underline {
+    border-bottom: 1px solid #b30000;
+  }
+
+  &.no-border {
+    border-bottom: none !important;
+  }
+}
+
+.seperator {
+  border-bottom: 1px #eb0000 solid !important;
+}
+
+.tableBgColor {
+  background: #f5f5f5;
+}
+
+.ermergency_alarm {
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}

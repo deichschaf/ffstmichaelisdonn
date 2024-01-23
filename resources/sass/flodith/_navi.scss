@@ -1,0 +1,45 @@
+#navi {
+  height: 20px;
+  border-top: 1px solid #fff;
+}
+
+#navi li,
+#maincontent ul {
+  list-style: none;
+}
+
+#navi li,
+.krls_west img {
+  margin-right: 10px;
+}
+
+#navi li {
+  position: relative;
+}
+
+#navi li a,
+#right a,
+#content a {
+  text-decoration: none;
+}
+
+#navi li a,
+#navi ul li:hover ul,
+div#navi ul ul li:hover ul {
+  display: block;
+}
+
+#navi li a:hover {
+  text-decoration: underline;
+}
+
+#navi li ul {
+  background: #900;
+  z-index: 5;
+  padding-left: -5px;
+}
+
+div#navi ul ul li:hover ul {
+  top: 0;
+  left: 100%;
+}

@@ -1,0 +1,134 @@
+.todo_type {
+  &_color {
+    &_bug {
+      i {
+        color: $todo-type-color-red;
+      }
+    }
+
+    &_new_function {
+      i {
+        color: $todo-type-color-yellow;
+      }
+    }
+
+    &_job {
+      i {
+        color: $todo-type-color-blue;
+      }
+    }
+
+    &_improvement {
+      i {
+        color: $todo-type-color-darkblue;
+      }
+    }
+
+    &_incident {
+      i {
+        color: $todo-type-color-redlight;
+      }
+    }
+
+    &_service_request {
+      i {
+        color: $todo-type-color-black;
+      }
+    }
+
+    &_risiko {
+      i {
+        color: $todo-type-color-grey;
+      }
+    }
+
+    &_epos {
+      i {
+        color: $todo-type-color-lightgrey;
+      }
+    }
+
+    &_change_request {
+      i {
+        color: $todo-type-color-lightblue;
+      }
+    }
+
+    &_defect {
+      i {
+        color: $todo-type-color-highred;
+      }
+    }
+
+    &_release {
+      i {
+        color: $todo-type-color-purple;
+      }
+    }
+  }
+  &.bug {
+    i {
+      color: $todo-type-color-red;
+    }
+  }
+
+  &.new_function {
+    i {
+      color: $todo-type-color-yellow;
+    }
+  }
+
+  &.job {
+    i {
+      color: $todo-type-color-blue;
+    }
+  }
+
+  &.improvement {
+    i {
+      color: $todo-type-color-darkblue;
+    }
+  }
+
+  &.incident {
+    i {
+      color: $todo-type-color-redlight;
+    }
+  }
+
+  &.service_request {
+    i {
+      color: $todo-type-color-black;
+    }
+  }
+
+  &.risiko {
+    i {
+      color: $todo-type-color-grey;
+    }
+  }
+
+  &.epos {
+    i {
+      color: $todo-type-color-lightgrey;
+    }
+  }
+
+  &.change_request {
+    i {
+      color: $todo-type-color-lightblue;
+    }
+  }
+
+  &.defect {
+    i {
+      color: $todo-type-color-highred;
+    }
+  }
+
+  &.release {
+    i {
+      color: $todo-type-color-purple;
+    }
+  }
+}

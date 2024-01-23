@@ -1,0 +1,14 @@
+.admin_icon {
+  &.icon_add {
+    color: $color-dark-green !important;
+  }
+  &.icon_trash {
+    color: $color-red !important;
+  }
+  &.icon_edit {
+    color: $color-blue !important;
+  }
+  &.icon_copy {
+    color: $color-orange !important;
+  }
+}

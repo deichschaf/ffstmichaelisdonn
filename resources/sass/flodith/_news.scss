@@ -1,0 +1,45 @@
+.news.pinn,
+.news {
+  width: 280px;
+  max-width: 280px;
+  margin: 10px;
+}
+
+.news.pinn {
+  height: 250px;
+  min-height: 250px;
+  background: url('/grfx/note_it.png') no-repeat scroll left top transparent;
+}
+
+.news.pinn,
+.news,
+.detailsinfo {
+  padding: 10px;
+}
+
+.news {
+  background: #efd551;
+  height: 200px;
+  min-height: 200px;
+}
+
+.news.pinn div {
+  margin-left: 5px;
+  margin-top: 35px;
+  width: 195px;
+  max-width: 195px;
+}
+
+.news big,
+h2 {
+  font-size: 16px;
+}
+
+.news big {
+  padding-top: 10px;
+}
+
+.news big,
+div.aktuelles ul li {
+  padding-bottom: 10px;
+}

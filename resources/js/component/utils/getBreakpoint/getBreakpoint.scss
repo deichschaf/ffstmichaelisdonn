@@ -1,0 +1,19 @@
+:root {
+  --breakpoint: xs;
+
+  @screen sm {
+    --breakpoint: sm;
+  }
+
+  @screen md {
+    --breakpoint: md;
+  }
+
+  @screen lg {
+    --breakpoint: lg;
+  }
+
+  @screen xl {
+    --breakpoint: xl;
+  }
+}

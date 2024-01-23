@@ -1,0 +1,88 @@
+.wetterwarnung {
+}
+
+.wetterwarnung table {
+  width: 100%;
+  text-align: center;
+  color: $text-color;
+}
+
+.wetterwarnung .wetter {
+  width: 40px;
+  text-align: center;
+}
+
+.wetter0,
+.weather0 {
+  background: #64b4ff;
+}
+
+.wetter1,
+.weather1 {
+  background: #ffff00;
+}
+
+.wetter2,
+.weather2 {
+  background: #ffff00;
+}
+
+.wetter3,
+.weather3 {
+  background: #fa9600;
+}
+
+.wetter4,
+.weather4 {
+  background: #ff0000;
+}
+
+.wetter5,
+.weather5 {
+  background: #af0064;
+}
+
+.wetterwarnungen {
+  .wetterwarnung {
+  }
+
+  .unwettervorabinformation {
+  }
+
+  .warnung {
+    margin-bottom: 10px;
+    font-size: 12px;
+
+    .content_background {
+      background: #ffffff;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .weathertype {
+    }
+
+    .region {
+    }
+
+    .headline {
+      font-size: 12px;
+      color: $text-color;
+    }
+
+    .event {
+    }
+
+    .beginn {
+    }
+
+    .ende {
+    }
+
+    .description {
+    }
+
+    .instruction {
+    }
+  }
+}

@@ -1,0 +1,174 @@
+// Variables
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap-grid';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '_modules/holiday';
+@import '_modules/slider';
+@import '_modules/navbar';
+@import '_modules/bilder';
+@import '_config/variables';
+@import '_config/color';
+@import '_config/font';
+@import '_config/layout';
+@import '_config/einsaetze';
+@import '_config/anwesenheit';
+@import '_modules/_einsatzgebiet.scss';
+
+body {
+  font-size: 14px !important;
+}
+
+.row {
+  &.darkgreen,
+  &.bgcolorheadline {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $bgcolorheadline;
+    color: $color-white;
+  }
+
+  &.white,
+  &.bgcolor1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $bgcolor1;
+  }
+
+  &.green,
+  &.bgcolor2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    //background-color: $bgcolor2;
+    background-color: $bgcolor_changer;
+  }
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 4%);
+}
+
+.strong {
+  font-weight: bold;
+  display: inline-block;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+}
+
+.font_lucida {
+  font-family: 'Lucida Handwriting';
+}
+
+.font_calibri {
+  font-family: 'Calibri Light';
+}
+
+.calendar_area {
+  font-size: 10pt;
+  line-height: 107%;
+  color: #1f3864;
+  font-weight: bold;
+
+  p {
+    text-align: center;
+    text-indent: 35.4pt;
+  }
+}
+
+.text_underline {
+  text-decoration: underline;
+}
+
+.text_italic {
+  font-style: italic;
+}
+
+body,
+p,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: Arial, Helvetica, SansSerif;
+}
+
+.active_state {
+  .color_green {
+    color: $todo-type-color-green;
+  }
+
+  .color_red {
+    color: $todo-type-color-red;
+  }
+}
+
+.list_navigation {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.list_without_bullets {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+
+  li {
+    border-bottom: $color-dark;
+    border-bottom-style: solid;
+    margin-bottom: 15px;
+
+    .headline {
+      font-size: 24px;
+      color: $color-dark;
+
+      .underline {
+        border-bottom: $color-dark;
+        border-bottom-style: solid;
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+      border-bottom-style: none;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.toplogo {
+  background-color: $color-white;
+  padding: 5px 0;
+
+  .headlogo {
+    width: 100%;
+  }
+}
+
+@import '_config/darkmode';

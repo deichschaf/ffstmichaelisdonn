@@ -1,0 +1,30 @@
+<svg width="576" height="460" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="462" width="578" y="-1" x="-1"/>
+  <g display="none" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_1"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect fill="none" stroke="#000000" stroke-width="10" x="12.5" y="8.95" width="554" height="444" id="svg_2"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="56.5" y="36.95" width="166" height="35" id="svg_20"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="234.5" y="36.95" width="143" height="37" id="svg_21"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="57.5" y="78.95" width="269.00001" height="35" id="svg_22"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="339.5" y="76.95" width="38" height="36" id="svg_23"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="58.5" y="120.95" width="322" height="36" id="svg_24"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="56.5" y="166.95" width="166" height="35" id="svg_3"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="234.5" y="166.95" width="143" height="37" id="svg_4"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="57.5" y="208.95" width="269.00001" height="35" id="svg_5"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="339.5" y="206.95" width="38" height="36" id="svg_6"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="58.5" y="250.95" width="322" height="36" id="svg_7"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="56.5" y="296.95" width="166" height="35" id="svg_8"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="234.5" y="296.95" width="143" height="37" id="svg_9"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="57.5" y="338.95" width="269.00001" height="35" id="svg_10"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="339.5" y="336.95" width="38" height="36" id="svg_11"/>
+  <rect fill="#000000" stroke="null" stroke-width="10" stroke-opacity="null" fill-opacity="null" x="58.5" y="380.95" width="322" height="36" id="svg_12"/>
+ </g>
+</svg>

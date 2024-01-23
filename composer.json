@@ -1,0 +1,195 @@
+{
+  "name" : "laravel/laravel",
+  "type" : "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": ["laravel", "framework"],
+    "license": "MIT",
+  "repositories" : [
+    {
+      "type" : "composer",
+      "url" : "http://repo.packagist.org"
+    },
+    {
+      "type" : "composer",
+      "url" : "http://packagist.org"
+    }
+  ],
+  "require" : {
+    "php" : "^8.2",
+    "arcanedev/log-viewer" : "*",
+    "guzzlehttp/guzzle" : "*",
+    "imagine/imagine" : "*",
+    "inertiajs/inertia-laravel" : "*",
+    "intervention/httpauth" : "*",
+    "laravel/breeze" : "*",
+    "laravel/framework" : "^10.10",
+    "laravel/passport" : "*",
+    "laravel/sanctum" : "*",
+    "laravel/tinker" : "*",
+    "laravel/ui" : "*",
+    "rap2hpoutre/laravel-log-viewer" : "*",
+    "robersonfaria/laravel-database-schedule" : "*",
+    "tightenco/ziggy" : "*",
+    "ext-libxml" : "*"
+  },
+  "require-dev" : {
+    "atymic/twitter" : "*",
+    "barryvdh/laravel-ide-helper" : "*",
+    "beyondcode/laravel-dump-server" : "*",
+    "danielstjules/stringy" : "*",
+    "daylerees/sanitizer" : "*",
+    "fakerphp/faker" : "*",
+    "filp/whoops" : "*",
+    "friendsofphp/php-cs-fixer" : "*",
+    "goodby/csv" : "*",
+    "haruncpi/laravel-log-reader" : "*",
+    "intervention/validation" : "*",
+    "kennedytedesco/validation" : "*",
+    "laravel/pint" : "*",
+    "league/flysystem" : "*",
+    "mockery/mockery" : "*",
+    "mrclay/minify" : "*",
+    "nunomaduro/collision" : "*",
+    "nunomaduro/larastan" : "*",
+    "phpmd/phpmd" : "*",
+    "phpspec/phpspec" : "*",
+    "phpunit/phpunit" : "*",
+    "phpunitgen/console" : "*",
+    "respect/validation" : "*",
+    "roave/security-advisories" : "*",
+    "simplesoftwareio/simple-qrcode" : "*",
+    "spatie/flysystem-dropbox" : "*",
+    "spatie/laravel-ignition" : "*",
+    "spatie/laravel-permission" : "*",
+    "symfony/css-selector" : "*",
+    "symfony/dom-crawler" : "*",
+    "symfony/thanks" : "*",
+    "vimeo/psalm" : "*",
+    "vlucas/phpdotenv" : "*",
+    "webpatser/laravel-countries" : "*"
+  },
+  "autoload" : {
+    "files" : [
+      "app/helpers.php"
+    ],
+    "psr-4" : {
+      "App\\" : "app/",
+      "Database\\Factories\\" : "database/factories/",
+      "Database\\Seeders\\" : "database/seeders/"
+    }
+  },
+  "autoload-dev" : {
+    "psr-4" : {
+      "Tests\\" : "tests/"
+    }
+  },
+  "scripts" : {
+    "test" : [
+      "@test-unit",
+      "@test-legacy",
+      "@test-functional"
+    ],
+    "clear-all" : [
+      "@clear-phpcs",
+      "@clear-phpstan"
+    ],
+    "cs-fixold" : [
+      "php-cs-fixer fix app --rules=@PRS2",
+      "php-cs-fixer fix resources --rules=@PRS2"
+    ],
+    "test-unit" : "bin/phpunit --testsuite unit --bootstrap tests/Unit/bootstrap.php --colors=always",
+    "test-z-unit" : "bin/phpunit --testsuite unit --bootstrap tests/Unit/bootstrap.php --colors=always --group z",
+    "test-legacy" : "bin/phpunit --testsuite legacy --colors=always",
+    "test-z-legacy" : "bin/phpunit --testsuite legacy --colors=always --group z",
+    "test-functional" : "bin/phpunit --testsuite functional --bootstrap tests/Functional/bootstrap.php --colors=always",
+    "test-z-functional" : "bin/phpunit --testsuite functional --bootstrap tests/Functional/bootstrap.php --colors=always --group z",
+    "test-coverage-unit-html" : "php -d extension=pcov.so -d pcov.enabled=1 -d pcov.directory=. -d pcov.exclude=\"~vendor~\" bin/phpunit --bootstrap tests/Unit/bootstrap.php --coverage-html report --testsuite unit --colors=always",
+    "coverage" : [
+      "@coverage-unit",
+      "@coverage-legacy",
+      "@coverage-functional"
+    ],
+    "coverage-unit" : "php -d extension=pcov.so -d pcov.enabled=1 bin/phpunit --bootstrap tests/Unit/bootstrap.php --coverage-php coverage/cov/unit.cov --testsuite unit",
+    "coverage-legacy" : "php -d extension=pcov.so -d pcov.enabled=1 bin/phpunit --coverage-php coverage/cov/legacy.cov --testsuite legacy",
+    "coverage-functional" : "php -d extension=pcov.so -d pcov.enabled=1 bin/phpunit --bootstrap tests/Functional/bootstrap.php --coverage-php coverage/cov/functional.cov --testsuite functional",
+    "coverage-merge-html" : "php -d memory_limit=-1 -d extension=pcov.so -d pcov.enabled=1 phpcov.phar merge --html=report coverage/cov",
+    "coverage-merge-text" : "php -d memory_limit=-1 -d extension=pcov.so -d pcov.enabled=1 phpcov.phar merge --text=php://stdout coverage/cov",
+    "cs-check" : "php phpcs.phar -p --parallel=100 -d memory_limit=1G",
+    "cs-fix1" : "php phpcbf.phar ./app -p --parallel=100 -d memory_limit=1G",
+    "cs-fix2" : "php phpcbf.phar ./resources -p --parallel=100 -d memory_limit=1G",
+    "cs-fix3" : "php phpcbf.phar ./routes -p --parallel=100 -d memory_limit=1G",
+    "cs-fix4" : "php phpcbf.phar ./config -p --parallel=100 -d memory_limit=1G",
+    "cs-fix5" : "php phpcbf.phar ./tests -p --parallel=100 -d memory_limit=1G",
+    "analyse" : [
+      "vendor/bin/console cache:warmup --env test --no-optional-warmers --quiet",
+      "vendor/bin/phpstan analyse --configuration=phpstan.neon bin/ config/ public/ src/ tests/ --level max --memory-limit=3G"
+    ],
+    "lint" : [
+      "@lint-composer",
+      "@lint-container",
+      "@lint-doctrine"
+    ],
+    "lint-composer" : "@composer validate --strict",
+    "lint-container" : [
+      "php vendor/bin/console lint:container --env dev",
+      "php vendor/bin/console lint:container --env test"
+    ],
+    "lint-doctrine" : [
+      "php vendor/bin/console doctrine:schema:validate --skip-sync -vvv --no-interaction"
+    ],
+    "lint-yaml" : "php vendor/bin/console lint:yaml config --parse-tags",
+    "cs-fix" : [
+      "@cs-fix1",
+      "@cs-fix2",
+      "@cs-fix3",
+      "@cs-fix4",
+      "@cs-fix5"
+    ],
+    "check" : [
+      "@cs-check",
+      "@lint",
+      "@analyse",
+      "@test"
+    ],
+    "start-check" : [
+      "@clear-all",
+      "@cs-fix",
+      "@cs-fix2",
+      "@check"
+    ],
+    "post-autoload-dump" : [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "post-update-cmd" : [
+      "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+    ],
+    "post-root-package-install" : [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd" : [
+      "@php artisan key:generate --ansi"
+    ]
+  },
+  "extra" : {
+    "laravel" : {
+      "dont-discover" : []
+    }
+  },
+  "config" : {
+    "optimize-autoloader" : true,
+    "preferred-install" : "dist",
+    "sort-packages" : true,
+    "process-timeout" : 0,
+    "disable-tls" : true,
+    "secure-http" : false,
+    "allow-plugins" : {
+      "composer/package-versions-deprecated" : true,
+      "pestphp/pest-plugin" : true,
+      "php-http/discovery" : true,
+      "symfony/thanks" : true
+    }
+  },
+  "minimum-stability" : "dev",
+  "prefer-stable" : true
+}

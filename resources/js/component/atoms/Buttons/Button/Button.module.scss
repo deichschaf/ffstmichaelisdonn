@@ -1,0 +1,8 @@
+.button {
+  @apply block w-full text-center align-middle text-sm leading-9;
+  @apply border-solid border rounded h-9 font-light cursor-pointer;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}

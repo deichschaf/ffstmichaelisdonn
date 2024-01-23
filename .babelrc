@@ -1,0 +1,22 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react",
+        "@babel/preset-typescript",
+        "module:metro-react-native-babel-preset"
+    ],
+    "plugins": [
+        "syntax-trailing-function-commas",
+        "@babel/plugin-transform-flow-strip-types",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-regenerator",
+        "@babel/plugin-transform-async-to-generator",
+        "@babel/plugin-transform-runtime",
+        [
+            "@babel/plugin-transform-spread",
+            {
+                "loose": true
+            }
+        ]
+    ]
+}

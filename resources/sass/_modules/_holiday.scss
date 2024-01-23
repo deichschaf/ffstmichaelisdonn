@@ -1,0 +1,25 @@
+.happy_holiday {
+  border: 3px solid #eeeeee;
+  margin-bottom: 20px;
+
+  @media (max-width: 400px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  img {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 400px) {
+      float: none;
+      display: block;
+    }
+  }
+}

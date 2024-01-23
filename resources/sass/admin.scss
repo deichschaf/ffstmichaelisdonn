@@ -1,0 +1,76 @@
+// Variables
+@import 'global';
+@import '_modules/pace-theme-flash';
+@import '~animate.css/animate.min.css';
+@import '~jquery.scrollbar/sass/jquery.scrollbar';
+@import '_modules/webarch';
+@import '_modules/loader';
+@import '_modules/image_upload';
+@import '_modules/admin_icons';
+@import '_modules/admin/page_edit';
+@import '_modules/admin/topimage';
+@import '_modules/todo_types';
+@import '_modules/admin/page_content_types';
+.admin_icon {
+  @include media-breakpoint-down(sm) {
+    padding: 10px;
+  }
+}
+.mousehover:hover {
+  background-color: $todo-type-color-lightgrey;
+}
+
+body {
+  background-color: $darkmode-background;
+  color: $darkmode-font-color;
+}
+a {
+  color: $darkmode-font-color;
+}
+img {
+  filter: $darkmode-img-filder;
+}
+
+#main {
+  background-color: $darkmode-background;
+  color: $darkmode-font-color;
+}
+
+.bgcolorheadline {
+  background-color: $darkmode-bgcolorheadline;
+  color: $darkmode-font-color;
+}
+
+.bgcolor1 {
+  background-color: $darkmode-bgcolor1;
+  color: $darkmode-font-color;
+  &:hover {
+    background-color: $darkmode-bgcolor1_hover;
+  }
+}
+
+.bgcolor2 {
+  background-color: $darkmode-bgcolor2;
+  color: $darkmode-font-color;
+  &:hover {
+    background-color: $darkmode-bgcolor2_hover;
+  }
+}
+
+.bgcolorheadline,
+.bgcolor1,
+.bgcolor2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.page-content {
+  a {
+    color: $text-color !important;
+  }
+}
+.detailinfo {
+  background: none;
+}
+.button_deactivated {
+  color: $color-light-grey;
+}

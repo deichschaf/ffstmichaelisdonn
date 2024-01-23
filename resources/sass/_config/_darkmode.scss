@@ -1,0 +1,14 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $darkmode-background;
+    color: $darkmode-font-color;
+  }
+  img {
+    filter: $darkmode-img-filder;
+  }
+
+  #main {
+    background-color: $darkmode-background;
+    color: $darkmode-font-color;
+  }
+}

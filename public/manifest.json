@@ -1,0 +1,111 @@
+{
+  "dir": "ltr",
+  "lang": "de-DE",
+  "name": "Freiwillige Feuerwehr Sankt Michaelisdonn",
+  "scope": "/",
+  "display": "fullscreen",
+  "start_url": "https://www.ff-st-michel.de/",
+  "short_name": "Freiwillige Feuerwehr Sankt Michaelisdonn",
+  "theme_color": "#ffffff",
+  "description": "Die Freiwillige Feuerwehr Sankt Michaelisdonn stellt sich vor.",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/win8-tile-144x144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon.ico",
+      "sizes": "32x32"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon.ico",
+      "sizes": "32x32"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon.gif",
+      "sizes": "256x256"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon.png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon.png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-57x57.png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-60x60.png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-72x72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-76x76.png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-114x114.png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-120x120.png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-128x128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-144x144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-152x152.png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-180x180.png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/apple-touch-icon-precomposed.png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon-16x16.png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon-32x32.png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon-96x96.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon-160x160.png",
+      "sizes": "160x160"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon-192x192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://www.ff-st-michel.de/images/favicons/favicon-196x196.png",
+      "sizes": "196x196"
+    }
+  ],
+  "screenshots": [],
+  "generated": "true"
+}

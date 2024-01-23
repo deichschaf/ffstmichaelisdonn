@@ -1,0 +1,283 @@
+*,
+html,
+body,
+#navi ul {
+  margin: 0;
+}
+
+*,
+#maincontent {
+  padding: 0;
+}
+
+html,
+body,
+* html #navi ul li,
+* + html #navi ul li,
+.liste {
+  width: 100%;
+}
+
+body {
+  background: #e4e4e4;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+strong,
+b,
+big,
+li,
+ul,
+input,
+textarea,
+tr,
+th,
+td,
+table,
+h4,
+h3,
+h2,
+h1,
+body,
+head {
+  font: 14px arial, helvetica, sans-serif;
+}
+
+a,
+#right a {
+  cursor: pointer;
+}
+
+a,
+.bghell td,
+.bghell,
+.bgdunkel td,
+.bgdunkel,
+#navistep a {
+  color: #000;
+}
+
+#shadowbox,
+#navi li ul,
+#navi ul li:hover ul ul {
+  display: none;
+}
+
+#shadowbox {
+  z-index: 10000;
+}
+
+#navi li ul,
+div#navi ul ul li:hover ul,
+.neu {
+  position: absolute;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+#content,
+h3,
+#content p,
+h1,
+h2,
+div.einsatzdisposition .left,
+div.einsatzdisposition .right,
+.krls_west img {
+  margin-bottom: 10px;
+}
+
+#left,
+#content,
+#right,
+#footer div,
+#navi li,
+* html #navi ul li,
+* + html #navi ul li,
+.news.pinn,
+.news {
+  float: left;
+}
+
+#left {
+  padding-top: 42px;
+  width: 70px;
+}
+
+#left,
+#footer {
+  text-align: center;
+}
+
+.hiorgs a img {
+  width: 60px;
+  height: 60px;
+}
+
+#content {
+}
+
+#right,
+.fahrzeugsuche {
+  width: 200px;
+}
+
+#footer,
+#navi {
+  background: #c80000;
+}
+
+#footer,
+#navi li a {
+  color: #fff;
+}
+
+#footer,
+#navistep {
+  font-size: 10px;
+}
+
+#footer {
+  height: 25px;
+}
+
+#footer,
+#navi,
+.bgueberschrift td,
+.bgueberschrift,
+.bghell td,
+.bghell,
+.bgdunkel td,
+.bgdunkel,
+.fahrzeugsuche {
+  padding: 5px;
+}
+
+#footer div {
+  margin-right: 20px;
+}
+
+* html body {
+  behavior: url('/csshover3-source.htc');
+  font-size: 100%;
+}
+
+* html #navi ul li a {
+  height: 1%;
+}
+
+#navistep {
+  height: 14px;
+}
+
+h3,
+h1 {
+  font-size: 18px;
+}
+
+.bgueberschrift td,
+.bgueberschrift {
+  background: #dcd0d0;
+  color: #c00;
+}
+
+.bgueberschrift td,
+.bgueberschrift,
+.erfolgreich,
+.fehler,
+.news big {
+  font-weight: bold;
+}
+
+.bghell td,
+.bghell {
+  background: #ebebeb;
+}
+
+.bgdunkel td,
+.bgdunkel {
+  background: #ccc;
+}
+
+#navi .melden,
+#content ol,
+#content ul {
+  margin-left: 20px;
+}
+
+#navi .melden img {
+  margin-top: -3px;
+}
+
+#content ul,
+div.einsatzdisposition .right {
+  margin-left: 15px;
+}
+
+.erfolgreich {
+  color: #060;
+}
+
+.fehler {
+  color: #f00;
+}
+
+.detailsinfo {
+  background: none repeat scroll 0 0 #e4e4e4;
+}
+
+h1,
+h2,
+h3,
+#content a {
+  color: #c80000;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+#content .button {
+  border: 1px solid #000;
+}
+
+.neu {
+  background: url('/grfx/new.png') no-repeat scroll left top transparent;
+  height: 30px;
+  width: 30px;
+  z-index: 10;
+}
+
+.start_neu_car {
+  padding-bottom: 5px;
+}
+
+.row h3 {
+  font-size: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+a img {
+  border: none;
+}
+
+div.einsatzdisposition {
+  margin-bottom: 15px;
+}
+
+div.einsatzdisposition .left {
+  margin-right: 15px;
+}
+
+#maincontent.start {
+  background: url('/grfx/bgmain.gif');
+}
+
+.column img {
+  width: 100%;
+}

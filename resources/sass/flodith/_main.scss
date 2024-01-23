@@ -1,0 +1,14 @@
+#main {
+  background: #fff;
+  z-index: 2;
+  border: 3px solid #c80000;
+  text-align: left;
+  top: 5px;
+}
+
+@include media-breakpoint-up(lg) {
+  /*#main{
+        left: 50%;
+        margin-left: -495px;
+    }*/
+}

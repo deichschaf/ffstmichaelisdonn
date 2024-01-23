@@ -1,0 +1,6 @@
+/node_modules
+/resources/js/component/webfonts/*
+/resources/js/component/atoms/Icon/webfonts/*
+/resources/js/component/svgs/*
+/resources/js/component/utils/*
+/resources/js/**/*.scss

@@ -1,0 +1,46 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double",
+      "avoid-escape"
+    ],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "interface-name": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-consecutive-blank-lines": false,
+    "no-console": false,
+    "object-literal-key-quotes": [
+      true,
+      "as-needed"
+    ],
+    "no-string-literal": false,
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
+    "max-line-length": [
+      true,
+      {
+        "limit": 120,
+        "ignore-pattern": "^import |^export {(.*?)}"
+      }
+    ],
+    "radix": false
+  }
+}

@@ -1,0 +1,65 @@
+.protokoll_overview {
+  .protokoll_button {
+    width: 50%;
+    &.einsatz {
+      background-color: $red;
+    }
+    &.uebung {
+      background-color: $blue;
+    }
+    &.absicherung {
+      background-color: $teal;
+    }
+    &.hydrantenpflege {
+      background-color: $green;
+    }
+
+    a {
+      display: flex;
+      height: 250px;
+      width: 250px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.anwesenheitsliste {
+  font-size: 16px;
+
+  .anwesenheit_mitglied {
+    &.user_active {
+      background: $anwesenheit-green;
+    }
+    &.user_inactive {
+      background: $anwesenheit-red;
+    }
+
+    div {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    font-size: 16px;
+    .anwesenheit_counter {
+      font-size: 16px;
+    }
+    .anwesenheit_name {
+      font-size: 16px;
+    }
+    .anwesenheit_anwesenheit {
+      font-size: 16px;
+    }
+    .anwesenheit_change {
+      font-size: 16px;
+    }
+
+    .anweisenheit_bemerkung {
+      display: none;
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+$gfx: '../grfx/';
+$gfxpath: '../img/grfx/';
+$images: '../img/';
+$webarch: '../images/webarch/icon/';
+$webarchicon: '../images/webarch/icon/';
+$svgs: '../js/component/svgs/';
+$fontsfolder: '../fonts/';
+
+// Body
+$body-bg: #f5f8fa;
+$text-shaddow: rgb(0 0 0 / 75%);
+$text-shaddow-light: rgb(0 0 0 / 25%);
+$font-color: #000000;
+$font-size: 13px;
+$font-size-mobile: 16px;
+$font-family: Tahoma, Arial, Helvetica, sans-serif;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: #3097d1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// Typography
+$font-family-sans-serif: Arial, Helvetica, sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$bgcolorheadline: #880000;
+$bgcolor1: #ffffff;
+$bgcolor1_hover: #ffffff;
+$bgcolor2: rgb(213 0 0 / 71%);
+$bgcolor_changer: rgb(255 140 140 / 71%);
+$bgcolor2_hover: rgb(213 0 0 / 71%);
+$text-color: #000000;
+
+// $color-dark: #1D6631;
+// $color-dark-green: #1D6631;
+// $color-white: #FFFFFF;
+// $color-green: #D2E6CD;
+$color-dark: $bgcolor2;
+$color-dark-green: $bgcolorheadline;
+$color-white: $bgcolor1;
+$color-green: #d2e6cd;
+$color-orange: #e39777;
+$color-red: #c80000;
+$color-blue: #0000ff;
+$color-light-grey: #999999;
+$color-dark-grey: #444444;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+$darkmode-background: #444444;
+
+//$darkmode-font-color: #000000;
+$darkmode-font-color: $text-color;
+$darkmode-font-color_bgcolor1: #444444;
+$todo-type-color-red: #b20000;
+$todo-type-color-yellow: #ffff00;
+$todo-type-color-blue: #0000ff;
+$todo-type-color-darkblue: #000099;
+$todo-type-color-redlight: #ff9999;
+$todo-type-color-black: #000000;
+$todo-type-color-grey: #797980;
+$todo-type-color-lightgrey: #eeeeee;
+$todo-type-color-lightblue: #7f7fff;
+$todo-type-color-highred: #ff0000;
+$todo-type-color-purple: #ff00ff;
+$todo-type-color-green: #060f4a;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$darkmode-background: #444;
+$darkmode-font-color: #000000;
+$darkmode-link-color: #e39777;
+$darkmode-img-filder: grayscale(30%);
+$darkmode-bgcolorheadline: #222;
+$darkmode-bgcolor1: #999;
+$darkmode-bgcolor1_hover: #999;
+$darkmode-bgcolor2: #444;
+$darkmode-bgcolor2_hover: #444;
+$darkmode-even: #bbbbbb;
+$darkmode-odd: #555555;
+$darkmode-title: #363636;
+$anwesenheit-green: #38c172;
+$anwesenheit-red: #e3342f;
+
+.col-xs-0 {
+  @media (max-width: 575px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.col-sm-0 {
+  @media (min-width: 576px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.col-md-0 {
+  @media (min-width: 768px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.col-lg-0 {
+  @media (min-width: 992px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.col-xl-0 {
+  @media (min-width: 1200px) {
+    max-width: 0px;
+    display: none;
+  }
+}
+
+.green {
+  color: $green !important;
+}
+
+.red {
+  color: $color-red !important;
+}
+
+.grey,
+.gray {
+  color: $color-light-grey !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}

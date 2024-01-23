@@ -1,0 +1,23 @@
+.startpage_h2 {
+  font-size: 1.4em;
+}
+
+.startpage_new_cars {
+  .card {
+    &.h-100 {
+      height: 455px !important;
+    }
+  }
+
+  .card-header {
+    font-size: 1.2em;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,304 @@
+RewriteBase /
+
+Options +FollowSymLinks
+# Zugriff auf .htaccess und .htpasswd verbieten, falls in Benutzung
+<FilesMatch "(\.htaccess)">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+        RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+    </IfModule>
+</IfModule>
+
+<IfModule mod_headers.c>
+    # BEGIN HEADER SECURITY
+    # HTTP Strict Transport Security (HSTS) aktivieren
+    #Content-Security-Policy: "default-src 'self' data:; script-src 'self' data: 'unsafe-inline'"
+	#X-Content-Security-Policy: "default-src 'self' data:; script-src 'self' data: 'unsafe-inline'"
+	#X-WebKit-CSP: "default-src 'self' data:; script-src 'self' data: 'unsafe-inline'"
+
+	#Content-Security-Policy: "default-src data:; script-src data: 'unsafe-inline'; style-src data: 'unsafe-inline'; img-src data:; frame-src data:; font-src data:"
+	Header set Content-Security-Policy "default-src *; script-src *; style-src *; img-src *; frame-src *;"
+	#X-Content-Security-Policy: "default-src data:; script-src data: 'unsafe-inline'; style-src data: 'unsafe-inline'; img-src data:; frame-src data:; font-src data:"
+	Header set X-Content-Security-Policy " default-src *; script-src *; style-src *; img-src *; frame-src *; "
+	#X-WebKit-CSP: "default-src data:; script-src data: 'unsafe-inline'; style-src data: 'unsafe-inline'; img-src data:; frame-src data:; font-src data:"
+	#X-WebKit-CSP: default-src *; script-src *; style-src *; img-src *; frame-src *;
+
+
+	#Header set Content-Security-Policy "default-src 'self';"
+	Header set Referrer-Policy: same-origin
+	#Header set X-Content-Security-Policy "default-src 'self'"
+	Header set X-Webkit-CSP "default-src 'self'"
+    Header set Set-Cookie HttpOnly;Secure
+    #Header set Strict-Transport-Security "max-age=10886400", includeSubDomains; preload
+    # Avoid Clickjacking, Seite darf nur in frame oder iframe geöffnet werden auf eigener Domain
+    #Header always append X-Frame-Options SAMEORIGIN
+    # Turn on XSS prevention tools, activated by default in IE and Chrome
+    #Header set X-XSS-Protection "1; mode=block"
+    Header always set X-Xss-Protection "1; mode=block"
+    # prevent mime based attacks like drive-by download attacks, IE and Chrome
+    #Header set X-Content-Type-Options: "nosniff"
+    Header always set X-Content-Type-Options nosniff
+    Header unset X-Powered-By
+    Header add X-Powered-By "www.ff-st-michel.de"
+    Header unset ETag
+    Header unset Server
+    # BEGIN Remove Last-Modified Header
+    Header unset Last-Modified
+    # END Remove Last-Modified
+    Header unset X-CF-Powered-By
+    Header unset X-Mod-Pagespeed
+    Header unset X-Pingback
+	#Header set X-Frame-Options SAMEORIGIN
+	#Header always append X-Frame-Options SAMEORIGIN
+	Header set X-Frame-Options "SAMEORIGIN"
+	#<FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+	#	Header unset X-Frame-Options
+	#</FilesMatch>
+	#<FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+	#	Header unset Content-Security-Policy
+	#</FilesMatch>
+	Header set X-XSS-Protection "1; mode=block"
+	#<FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+	#	Header unset X-XSS-Protection
+	#</FilesMatch>
+	#END HEADER SECURITY
+    # BEGIN Cache-Control-Headers
+    <FilesMatch "\\.(gif|flv|jpg|jpeg|png|gif|swf|ico|webp)$">
+        Header set Cache-Control "max-age=1209600, public"
+    </FilesMatch>
+    <FilesMatch "\\.(css)$">
+        Header set Cache-Control "max-age=691200, public"
+		#86400
+    </FilesMatch>
+    <FilesMatch "\\.(js)$">
+        Header set Cache-Control "max-age=691200, public"
+		#86400
+    </FilesMatch>
+    # END Cache-Control-Headers
+    <FilesMatch "\.(js|css|xml|gz)$">
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+</IfModule>
+
+# Disable server signature
+ServerSignature Off
+
+<IfModule php5_module>
+    php_flag session.cookie_httponly on
+</IfModule>
+
+### Not for 1&1 Server
+#php_value session.cookie_httponly 1
+#php_value session.cookie_secure 0
+######
+
+RewriteEngine On
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Startloader
+AddType application/vnd.ms-fontobject eot
+AddType font/truetype ttf
+AddType font/opentype otf
+AddType font/woff woff
+AddType image/x-icon .ico
+
+<ifModule mod_gzip.c>
+    mod_gzip_on Yes
+    mod_gzip_dechunk Yes
+    mod_gzip_item_include file .(html?|txt|css|js|php|pl|jpg|jpeg|png|webp)$
+    #mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+    mod_gzip_item_include handler ^cgi-script$
+    mod_gzip_item_include mime ^text/.*
+    mod_gzip_item_include mime ^application/x-javascript.*
+    mod_gzip_item_exclude mime ^image/.*
+    mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+# Deflate Compression by FileType
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE image/gif
+    AddOutputFilterByType DEFLATE image/jp2
+    AddOutputFilterByType DEFLATE image/jpeg
+    AddOutputFilterByType DEFLATE image/png
+    AddOutputFilterByType DEFLATE image/ico
+    AddOutputFilterByType DEFLATE image/webp
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom_xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/x-shockwave-flash
+    AddOutputFilterByType DEFLATE x-font/otf
+    AddOutputFilterByType DEFLATE x-font/ttf
+    AddOutputFilterByType DEFLATE x-font/eot
+    AddOutputFilterByType DEFLATE font/truetype
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE text/vtt
+    AddOutputFilterByType DEFLATE text/x-component
+    AddOutputFilterByType DEFLATE application/js
+    AddOutputFilterByType DEFLATE application/x-httpd-php
+    AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+    AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/ld+json
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-web-app-manifest+json
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE image/svg+xml
+
+    # Ausnahme: Grafiken
+    SetEnvIfNoCase REQUEST_URI \.(?:gif|jpg|jpeg|png|svg|webp)$ no-gzip dont_vary
+
+    # Drop problematic browsers
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+
+    # Make sure proxies don't deliver the wrong content
+    #Header append Vary User-Agent env=!dont-vary
+
+    <files *.html>
+        SetOutputFilter DEFLATE
+    </files>
+</IfModule>
+
+# Cache all Images for Pagespeed #TELE-1711
+<IFModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 week"
+    ExpiresByType image/gif "access plus 14 days"
+    ExpiresByType image/ico "access plus 14 days"
+    ExpiresByType image/ico "access plus 14 days"
+    ExpiresByType image/x-icon "access plus 14 days"
+    ExpiresByType image/jpeg "access plus 14 days"
+    ExpiresByType image/jpg "access plus 14 days"
+    ExpiresByType image/png "access plus 14 days"
+    ExpiresByType image/webp "access plus 14 days"
+    ExpiresByType text/css "access plus 1 days"
+    ExpiresByType image/svg+xml "access plus 14 days"
+    ExpiresByType text/html "access plus 14 days"
+    ExpiresByType text/plain "access plus 14 days"
+    ExpiresByType text/x-component "access plus 14 days"
+    ExpiresByType text/javascript "access plus 14 days"
+    ExpiresByType text/x-javascript "access plus 14 days"
+    ExpiresByType application/pdf "access plus 14 days"
+    ExpiresByType application/javascript "access plus 14 days"
+    ExpiresByType application/x-javascript "access plus 14 days"
+    ExpiresByType application/x-shockwave-flash "access plus 14 days"
+    ExpiresByType image/x-icon "access plus 14 days"
+    ExpiresByType application/xml "access plus 14 days"
+    ExpiresByType application/json "access plus 14 days"
+    ExpiresByType application/ld+json "access plus 14 days"
+    ExpiresByType application/xml "access plus 14 days"
+    ExpiresByType text/xml "access plus 14 days"
+    ExpiresByType application/x-web-app-manifest+json "access plus 0 seconds"
+    ExpiresByType text/cache-manifest "access plus 0 seconds"
+    ExpiresByType audio/ogg "access plus 14 days"
+    ExpiresByType video/mp4 "access plus 14 days"
+    ExpiresByType video/ogg "access plus 14 days"
+    ExpiresByType video/webm "access plus 14 days"
+    ExpiresByType application/atom+xml "access plus 1 hour"
+    ExpiresByType application/rss+xml "access plus 1 hour"
+    ExpiresByType application/font-woff "access plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    ExpiresByType application/x-font-ttf "access plus 1 month"
+    ExpiresByType font/opentype "access plus 1 month"
+    # BEGIN Turn ETags Off
+    # If your server don't support ETags deactivate with "None" (and remove header)
+    <IfModule mod_headers.c>
+        Header unset ETag
+    </IfModule>
+    FileETag None
+    # END Turn ETags Off
+</IFModule>
+
+#TraceEnable off
+
+# Set 'Vary' response header for .gz files
+<FilesMatch "\.gz$">
+    <IfModule mod_headers.c>
+        Header always append Vary "Accept-Encoding"
+    </IfModule>
+</FilesMatch>
+
+# Start for Laravel
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    #Cache Buster by FileMTime
+    RewriteRule ^(.+)\.(.+)\.(js|css)$ $1.$3 [L]
+
+    # BEGIN GZIP
+    # If the user agent accepts gzip encoding...
+    #RewriteCond %{HTTP:Accept-Encoding} gzip
+    # ...and the requested file exists...
+    #RewriteCond %{REQUEST_FILENAME} -f
+    # ...then use a PHP script serve a compressed version. Done.
+    #RewriteRule \.(css|ico|js|json|png|jpg|jpeg|webp)$ /gz.php [L]
+    # END GZIP
+
+    # Disable directory browsing
+    #Options All -Indexes
+    CheckSpelling off
+
+    #RewriteEngine On
+    #Kill Trace Mode
+    # TraceEnable Off
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+    RewriteRule .* - [F]
+
+    # kill PHP easter eggs. This condition will throw a 403 until expose_php in php.ini is disabled.
+    RewriteCond %{QUERY_STRING} \=PHP[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} [NC]
+	RewriteRule .* - [F]
+
+    # ignore assets
+    RewriteCond %{REQUEST_URI} !^/(img|css|js|fonts|pdf|standalone) [NC]
+	RewriteCond %{REQUEST_URI} !^/.*\.(png|jpg|gif)$ [NC]
+
+    # Force SSL
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Force www
+    RewriteCond %{HTTP_HOST} !^www\.feuerwehr-stmichaelisdonn\.de$
+    RewriteRule ^(.*)$ https://www.ff-st-michel.de/$1 [L,R=301]
+    # Remove public folder form URL
+    #RewriteRule ^(.*)$ public/$1 [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # remove index.php from urls
+    RewriteCond %{THE_REQUEST} ^.*/index\.php
+    RewriteRule ^index.php/(.*)$ /$1 [R=301,L]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
